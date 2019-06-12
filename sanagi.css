@@ -1,0 +1,14 @@
+h1 {
+border-bottom: solid 3px black;
+}
+table{
+    /*background-color: #99FF;  /* 背景色指定 */
+    border-collapse:  collapse; /* セルの線を重ねる */
+}
+tr:nth-child(odd) {
+    background-color:  #ddd;    /* 背景色指定 */
+}
+ 
+th,td {
+    padding: 5px 10px;          /* 余白指定 */
+}

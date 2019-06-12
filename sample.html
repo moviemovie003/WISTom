@@ -1,0 +1,174 @@
+<!DOCTYPEhtml>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>フォームサンプル</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+        ul {
+            list-style: none;
+            margin: 0px 0px 0px 2px;
+            padding: 0px;
+        }
+
+        ul li {
+            padding: 17px 0px 0px 60px;
+            background: url(images/button.png) no-repeat 0 0;
+            width: 290px;
+            height: 33px;
+            width: 350px;
+            height: 50px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        ul li.selected {
+            background-position: 0px -50px;
+        }
+
+        ul li:hover {
+            background-position: 0px -50px;
+        }
+
+        ul li.selected {
+            background-position: 0px -100px;
+            cursor: default;
+        }
+
+        #bannerMaster {
+            position: relative;
+            width: 3000px;
+        }
+
+        .banner {
+            float: left;
+        }
+
+        #showArea {
+            width: 600px;
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul>
+        <li id="0">軽くジョギングをする</li>
+        <li id="1">ストレッチで目を覚ます</li>
+        <li id="2">テレビで情報収集</li>
+        <li id="3">遅刻しそうなので、すぐに出発</li>
+        <li id="4">２度寝する</li>
+    </ul>
+    <li id="0" class="selected">軽くジョギングをする</li>
+    <ul>
+        <li id="0">軽くジョギングをする</li>
+        <li id="1">ストレッチで目を覚ます</li>
+        <li id="2">テレビで情報収集</li>
+        <li id="3">遅刻しそうなので、すぐに出発</li>
+        <li id="4">２度寝する</li>
+    </ul>
+    <hr />
+    <ul>
+        <li id="0">料理を作って本格朝食</li>
+        <li id="1">パンとスープでシンプル朝食</li>
+        <li id="2">サプリメントですませる</li>
+        <li id="3">食べない</li>
+        <li id="4">食べるどころか吐きそうだ...</li>
+    </ul>
+    <ul>
+        <li id="0_0">グループ「0」の選択肢「0」</li>
+        <li id="0_1">グループ「0」の選択肢「1」</li>
+        <li id="0_2">グループ「0」の選択肢「2」</li>
+        <li id="0_3">グループ「0」の選択肢「3」</li>
+        <li id="0_4">グループ「0」の選択肢「4」</li>
+    </ul>
+    <hr />
+    <ul>
+        <li id="1_0">グループ「1」の選択肢「0」</li>
+        <li id="1_1">グループ「1」の選択肢「1」</li>
+        <li id="1_2">グループ「1」の選択肢「2」</li>
+        <li id="1_3">グループ「1」の選択肢「3」</li>
+        <li id="1_4">グループ「1」の選択肢「4」</li>
+    </ul>
+    <div id="bannerMaster">
+        <div class="banner"><img src="images/1.jpg" width="600" height="220" alt="1"> <div class="banner"><img src="images/2.jpg" width="600" height="220" alt="2"> <div class="banner"><img src="images/3.jpg" width="600" height="220" alt="3"> <div class="banner"><img src="images/4.jpg" width="600" height="220" alt="4"> <div class="banner"><img src="images/5.jpg" width="600" height="220" alt="5"> </div> <div id="showArea">
+            <div id="bannerMaster">
+                <div class="banner"><img src="images/1.jpg" width="600" height="220">
+                    <div class="banner" id="0"><img src="images/1.jpg" width="600" height="220">
+<div class="banner" id="1"><img src="images/2.jpg" width="600" height="220">
+<div class="banner" id="2"><img src="images/3.jpg" width="600" height="220">
+<div class="banner" id="3"><img src="images/4.jpg" width="600" height="220">
+<div class="banner" id="4"><img src="images/5.jpg" width="600" height="220">
+                    <script>
+                        $("ul>li").click(function() {
+                            alert(this.id);
+                        });
+                        $("ul>li").click(function() {
+                            $(this).addClass("selected");
+                        });
+                        var selectID;
+                        $("ul>li").click(function() {
+                            $(this).addClass("selected");
+                            selectID = this.id;
+                        });
+                        $("ul>li").click(function() {
+                            $(this).addClass("selected");
+                            alert(selectID + "の選択肢を元に戻します");
+                            selectID = id;
+                        });
+                        $("ul>li").click(function() {
+                            $(this).addClass("selected");
+                            $("#" + selectID).removeClass("selected");
+                            selectID = this.id;
+                        });
+                        $("ul>li").click(function() {
+                            var selectID;
+                            $(this).addClass("selected");
+                            $("#" + selectID).removeClass("selected");
+                            selectID = this.id;
+                        });
+                        $("ul>li").click(function() {
+                            $(this).addClass("selected");
+                            $("#" + selectID).removeClass("selected");
+                            selectID = this.id;
+                        });
+                        $("ul>li").click(function() {
+                            $(this).addClass("selected");
+                            selectID = this.id;
+                            $("#" + selectID).removeClass("selected");
+                        });
+                        var selectArray = [-1, -1, -1, -1, -1];
+                        $(function() {
+                            $("ul>li").click(function() {
+                                $(this).addClass("selected");
+                            });
+                        });
+                        var idArray = this.id.split("_");
+                        var qID = Number(idArray[0]);
+                        var ansID = Number(idArray[1]);
+                        alert("グループ" + qID + "の選択肢" + ansID);
+                        selectArray[qID] = ansID;
+                        alert(selectArray);
+                        var selectID = selectArray[qID]; //---選択されてたIDを取得
+                        $("#" + qID + "_" + ansID).addClass("selected");
+                        $("#" + qID + "_" + selectID).removeClass("selected"); //---選択されてたラジオボタンを戻す
+                        if (ansID == selectID) return;
+                        $("ul>li").click(function() {
+                            var idArray = this.id.split("_");
+                            var qID = Number(idArray[0]);
+                            var ansID = Number(idArray[1]);
+                            //$(this).addClass("selected")//---この行を削除;
+                            var selectID = selectArray[qID];
+                            if (ansID == selectID) return;
+                            $("#" + qID + "_" + ansID).addClass("selected");
+                            $("#" + qID + "_" + selectID).removeClass("selected");
+                            selectArray[qID] = ansID;
+                        });
+                    </script>
+</body>
+
+</html>

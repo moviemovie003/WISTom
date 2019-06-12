@@ -1,0 +1,38 @@
+/*レビュー*/
+.title{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.review {
+  border-collapse: collapse;
+  height: 500px;
+  width: 680px;
+}
+
+.review td {
+ border: solid 1px;
+ padding: 0.5em; 
+}
+
+#reviewa{
+  line-height: 1.0em;
+}
+
+#reviewimg{
+  padding-top: 20px;
+  margin-right: 10px;
+}
+
+.subject{
+  font-weight: bold;
+}
+
+.hyouka{
+  text-align: left;
+  font-size: 30px;
+}
+
+.date{
+  text-align: right;
+}

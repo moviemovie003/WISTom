@@ -1,0 +1,66 @@
+.yesno {
+    height: 400px;
+	position:relative;
+	background: #fff;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07);
+	margin:0 0 40px;
+	clear: both;
+	overflow: hidden;
+}
+
+.yesno ul{
+	overflow: hidden;
+	padding: 0 0 0 25px;
+}
+ 
+.yesno ul li {
+	list-style:none;
+	float: left;
+	text-align: center;
+	display: block;
+	color: #FFF;
+	background-color: #066;
+	line-height: 200px;
+	font-size: 120%;
+	width: 320px;
+	margin: 0 20px 0 0;
+}
+.positionFit {
+	position:absolute;
+	left: 0px;
+	top: 70px;
+	width: 710px;
+}
+
+.positionFit p{
+	background: #eee none repeat scroll 0 0;
+    padding: 10px 25px;
+    margin: 0 25px;
+}
+
+.yesno ul li a {
+    background-color: #3498db;
+    color: #fff;
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    width: 100%;
+    font-size: 28px;
+}
+
+.no-bg{
+	background: #48cc83!important;
+}
+
+.yesno ul li a:hover {
+    background-color: #298dcf;
+}
+
+.yesno .material-icons{
+	background: rgba(0, 0, 0, 0.1) none repeat scroll 0 0;
+    border-radius: 50%;
+    font-size: 30px;
+    padding: 10px 10px 8px;
+    vertical-align: middle;
+    margin: 0 10px 0 0;
+}
